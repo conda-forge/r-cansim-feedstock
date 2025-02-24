@@ -1,4 +1,4 @@
-{% set version = "0.3.17" %}
+{% set version = "0.4" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/cansim_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/cansim/cansim_{{ version }}.tar.gz
-  sha256: 5d9eaa697c21d6bc27d6a62f576b92a7774180e88082c5c71d047c765b4ccc52
+  sha256: 0ac936947f82e29dc5e22387870821f4c5c6a4d1e7a042673260f46ffb1764bf
 
 build:
   number: 0
@@ -24,34 +24,34 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-dbi
-    - r-rsqlite
-    - r-digest >=0.1
-    - r-dplyr >=0.7
+    - r-dbi >=1.2
+    - r-rsqlite >=2.3
+    - r-arrow >=18.1
+    - r-dbplyr >=2.5
+    - r-digest >=0.6
+    - r-dplyr >=1.1
     - r-httr >=1.0.0
-    - r-jsonlite >=1.0
-    - r-purrr
-    - r-readr
-    - r-rlang
-    - r-rvest
-    - r-stringr
-    - r-tibble
-    - r-xml2
+    - r-purrr >=1.0
+    - r-readr >=2.1
+    - r-rlang >=1.1
+    - r-stringr >=1.5
+    - r-tibble >=3.2
+    - r-tidyr >=1.3
   run:
     - r-base
-    - r-dbi
-    - r-rsqlite
-    - r-digest >=0.1
-    - r-dplyr >=0.7
+    - r-dbi >=1.2
+    - r-rsqlite >=2.3
+    - r-arrow >=18.1
+    - r-dbplyr >=2.5
+    - r-digest >=0.6
+    - r-dplyr >=1.1
     - r-httr >=1.0.0
-    - r-jsonlite >=1.0
-    - r-purrr
-    - r-readr
-    - r-rlang
-    - r-rvest
-    - r-stringr
-    - r-tibble
-    - r-xml2
+    - r-purrr >=1.0
+    - r-readr >=2.1
+    - r-rlang >=1.1
+    - r-stringr >=1.5
+    - r-tibble >=3.2
+    - r-tidyr >=1.3
 
 test:
   commands:
