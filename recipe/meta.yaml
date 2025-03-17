@@ -1,4 +1,4 @@
-{% set version = "0.4" %}
+{% set version = "0.4.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/cansim_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/cansim/cansim_{{ version }}.tar.gz
-  sha256: 0ac936947f82e29dc5e22387870821f4c5c6a4d1e7a042673260f46ffb1764bf
+  sha256: b710e787a59002743933b1e85bc5e995af6ce0414cb580311de6d9742b321cbe
 
 build:
   number: 0
